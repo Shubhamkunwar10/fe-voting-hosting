@@ -1,0 +1,33 @@
+[
+    {
+      "designation": "President",
+      "candidates": [
+        { "id": 1, "name": "Candidate 1", "votes": 10 },
+        { "id": 2, "name": "Candidate 2", "votes": 20 },
+        { "id": 3, "name": "Candidate 3", "votes": 30 },
+        { "id": 4, "name": "Candidate 4", "votes": 40 },
+        { "id": 5, "name": "Candidate 5", "votes": 50 }
+      ]
+    },
+    {
+      "designation": "Vice President",
+      "candidates": [
+        { "id": 1, "name": "Candidate 6", "votes": 60 },
+        { "id": 2, "name": "Candidate 7", "votes": 70 },
+        { "id": 3, "name": "Candidate 8", "votes": 80 },
+        { "id": 4, "name": "Candidate 9", "votes": 90 },
+        { "id": 5, "name": "Candidate 1", "votes": 100 }
+      ]
+    },
+    {
+      "designation": "treasurer",
+      "candidates": [
+        { "id": 1, "name": "Candidate 4", "votes": 120 },
+        { "id": 2, "name": "Candidate 3", "votes": 180 },
+        { "id": 3, "name": "Candidate 7", "votes": 45 },
+        { "id": 4, "name": "Candidate 11", "votes": 12 },
+        { "id": 5, "name": "Candidate 10", "votes": 322 }
+      ]
+    }
+  ]
+  

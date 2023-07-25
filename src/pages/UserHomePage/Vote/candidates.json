@@ -1,0 +1,67 @@
+{
+    "treasurer": {
+      "user1": {
+        "name": "Rabbit",
+        "age": "22",
+        "image": "https://media.gettyimages.com/id/1148265348/photo/facebook-ceo-mark-zuckerberg-leaves-the-elysee-palace-after-a-meeting-with-french-president.jpg?s=612x612&w=0&k=20&c=RkYwN8doe2xKWOkllbOAdFn1gyz4pUIFaWsc1HGBoaU="
+      },
+      "user2": {
+        "name": "Shubham",
+        "age": "22",
+        "image": "https://m.media-amazon.com/images/M/MV5BN2E0YTZmNmMtZWM0Ni00ZjhlLTllNGQtMzYyYTY4NWEzOTFkXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_FMjpg_UX1000_.jpg"
+      },
+      "user3": {
+        "name": "Kunwar",
+        "age": "22",
+        "image": "https://variety.com/wp-content/uploads/2023/02/Elon-Musk.jpg"
+      },
+      "user4": {
+        "name": "Alice",
+        "age": "23",
+        "image": "https://w0.peakpx.com/wallpaper/738/294/HD-wallpaper-alexandra-daddario-actress-american-beautiful-eyes.jpg"
+      },
+      "user5": {
+        "name": "John",
+        "age": "21",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Amitabh_Bachchan_2013.jpg/330px-Amitabh_Bachchan_2013.jpg"
+      }   
+    },
+    "vice_president": {
+      "user1": {
+        "name": "Shubham",
+        "age": "22",
+        "image": "url_unsplash_8"
+      },
+      "user2": {
+        "name": "Neeraj",
+        "age": "22",
+        "image": "url_unsplash_9"
+      },
+      "user3": {
+        "name": "Vishal",
+        "age": "22",
+        "image": "url_unsplash_10"
+      },
+      "user4": {
+        "name": "Sarah",
+        "age": "23",
+        "image": "url_unsplash_11"
+      },
+      "user5": {
+        "name": "Emily",
+        "age": "21",
+        "image": "url_unsplash_12"
+      },
+      "user6": {
+        "name": "David",
+        "age": "24",
+        "image": "url_unsplash_13"
+      },
+      "user7": {
+        "name": "Michael",
+        "age": "22",
+        "image": "url_unsplash_14"
+      }
+    }
+  }
+  
