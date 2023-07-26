@@ -126,7 +126,7 @@ export default function BasicEditingGrid() {
   );
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 80, editable: false },
+    { field: 'id', headerName: 'ID', width:120, editable: false },
     { field: 'name', headerName: 'Name', width: 180, editable: true },
     { field: 'age', headerName: 'Age', type: 'number', editable: true, align: 'left', headerAlign: 'left' },
     { field: 'dateCreated', headerName: 'Date Created', type: 'date', width: 180, editable: true },
