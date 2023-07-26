@@ -97,7 +97,6 @@ export const ProfileMenu = styled.div`
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1;
   min-width: 160px;
 
   ${Avatar}:hover + & {
@@ -115,7 +114,6 @@ export const DiscoverMenu = styled.div`
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1;
 
   ${MenuItem}:hover & {
     display: block;
