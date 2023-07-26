@@ -27,7 +27,7 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import  AppBar  from '../../../components/Navbar/NavbarAdmin';
-import CandidateResult from "../../../components/VotersList/VotersList";
+import CandidateResult from "../../../components/AllUsers/VotersList";
 import AnnounceResult from "./Result"
 
 

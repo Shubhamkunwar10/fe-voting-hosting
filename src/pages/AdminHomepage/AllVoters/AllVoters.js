@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import VoterResult from "../../../components/VotersList/VotersList";
+import VoterResult from "../../../components/AllUsers/VotersList";
 import VotersForm from "../../../components/Forms/VotersForm";
 
 const FormContainer = styled(Paper)({
@@ -48,10 +48,14 @@ const categories = [
 
 const AddVoters = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    gender: '',
-    age: '',
+    Name: '',
+    branch: '',
+    category: '',
+    UniversityID: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    studentInfo: '',
   });
 
   const handleChange = (e) => {
@@ -82,10 +86,10 @@ const AddVoters = () => {
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
       <Box style={{ padding: '8px' }}>
         <Grid container spacing={2}>
-        <Grid item xs={12}>
+          <Grid item xs={12}>
             <Paper style={cardStyle}>
               <FormContainer>
-              <FormTitle variant="h6">Voters List</FormTitle>
+                <FormTitle variant="h6">Voters List</FormTitle>
                 <FormButton variant="contained" color="primary" onClick={handleOpenVoterForm}>
                   Add Voter
                 </FormButton>

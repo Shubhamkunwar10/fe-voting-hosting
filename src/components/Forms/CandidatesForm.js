@@ -18,6 +18,8 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
 
 const categories = [
   '2021',
@@ -60,175 +62,172 @@ const CandidatesForm = ({ formData, handleChange, designations, handleCloseCandi
   };
 
   return (
-    <Box
-      sx={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        zIndex: 6000,
-        bgcolor: 'background.paper',
-        boxShadow: 24,
-        p: 4,
-        minWidth: 300,
-      }}
-    >
-      <Typography variant="h6" gutterBottom sx={{ paddingBottom: 2 }}>
-        Add Candidate
-      </Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="Name"
-            name="Name"
-            label="Name"
-            fullWidth
-            size="small"
-            autoComplete="off"
-            variant="outlined"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="branch"
-            name="branch"
-            label="Branch"
-            fullWidth
-            size="small"
-            autoComplete="off"
-            variant="outlined"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <FormControl fullWidth size="small">
-            <InputLabel id="category-label">Batch</InputLabel>
-            <Select
-              sx={{
-                zIndex: 9999,
-              }}
-              labelId="category-label"
-              id="category"
-              value={formData.category}
-              label="Category"
-              onChange={handleChange}
-            >
-              {designations.map((item) => (
-                <MenuItem key={item} value={item}>
-                  {item}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="UniversityID"
-            name="UniversityID"
-            label="University ID"
-            fullWidth
-            size="small"
-            autoComplete="off"
-            variant="outlined"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Button>
-            <UploadFileIcon /> Upload ID Card
-          </Button>
-        </Grid>
+    <Dialog open onClose={handleCloseCandidateForm} maxWidth="sm" fullWidth>
+      <DialogContent dividers>
+        <Box
+          sx={{
+            p: 4,
+            minWidth: 300,
+          }}
+        >
+          <Typography variant="h6" gutterBottom sx={{ paddingBottom: 2 }}>
+            Add Candidate
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="Name"
+                name="Name"
+                label="Name"
+                fullWidth
+                size="small"
+                autoComplete="off"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="branch"
+                name="branch"
+                label="Branch"
+                fullWidth
+                size="small"
+                autoComplete="off"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <FormControl fullWidth size="small">
+                <InputLabel id="category-label">Batch</InputLabel>
+                <Select
+                  sx={{
+                    zIndex: 9999,
+                  }}
+                  labelId="category-label"
+                  id="category"
+                  value={formData.category}
+                  label="Category"
+                  onChange={handleChange}
+                >
+                  {designations.map((item) => (
+                    <MenuItem key={item} value={item}>
+                      {item}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="UniversityID"
+                name="UniversityID"
+                label="University ID"
+                fullWidth
+                size="small"
+                autoComplete="off"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Button>
+                <UploadFileIcon /> Upload ID Card
+              </Button>
+            </Grid>
 
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="email"
-            name="email"
-            label="Email"
-            fullWidth
-            size="small"
-            autoComplete="off"
-            variant="outlined"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <FormControl fullWidth variant="outlined" size="small">
-            <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-password"
-              type={showPassword ? 'text' : 'password'}
-              value={formData.password}
-              name="password"
-              onChange={handleChange}
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                  >
-                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                  </IconButton>
-                </InputAdornment>
-              }
-              label="Password"
-            />
-          </FormControl>
-        </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="email"
+                name="email"
+                label="Email"
+                fullWidth
+                size="small"
+                autoComplete="off"
+                variant="outlined"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <FormControl fullWidth variant="outlined" size="small">
+                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-password"
+                  type={showPassword ? 'text' : 'password'}
+                  value={formData.password}
+                  name="password"
+                  onChange={handleChange}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
+            </Grid>
 
-        {/* Add Confirm Password field */}
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="confirmPassword"
-            name="confirmPassword"
-            label="Confirm Password"
-            fullWidth
-            size="small"
-            autoComplete="off"
-            variant="outlined"
-            type={'password'}
-            value={formData.confirmPassword}
-            onChange={handleChange}
-          />
-        </Grid>
+            {/* Add Confirm Password field */}
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                id="confirmPassword"
+                name="confirmPassword"
+                label="Confirm Password"
+                fullWidth
+                size="small"
+                autoComplete="off"
+                variant="outlined"
+                type={'password'}
+                value={formData.confirmPassword}
+                onChange={handleChange}
+              />
+            </Grid>
 
-        <Grid item xs={12}>
-          <TextField
-            required
-            id="studentInfo"
-            name="studentInfo"
-            label="Student Information"
-            fullWidth
-            multiline
-            rows={4}
-            size="small"
-            autoComplete="off"
-            variant="outlined"
-            value={formData.studentInfo}
-            onChange={handleChange}
-          />
-        </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                id="studentInfo"
+                name="studentInfo"
+                label="Student Information"
+                fullWidth
+                multiline
+                rows={4}
+                size="small"
+                autoComplete="off"
+                variant="outlined"
+                value={formData.studentInfo}
+                onChange={handleChange}
+              />
+            </Grid>
 
-        <Grid item xs={12} sx={{
+            <Grid item xs={12} sx={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-evenly;',
               px: [1],
             }} >
-          <Button variant="contained" sx={{ backgroundColor: '#ff781f' }} onClick={handleSubmit}>
-            Save
-          </Button>
-          <Button color="secondary" sx={{ backgroundColor: 'red' }} onClick={handleCloseCandidateForm}>
-            Close
-          </Button>
-        </Grid>
-      </Grid>
-    </Box>
+              <Button variant="contained" sx={{ backgroundColor: '#ff781f' }} onClick={handleSubmit}>
+                Save
+              </Button>
+              <Button color="secondary" sx={{ backgroundColor: 'red' }} onClick={handleCloseCandidateForm}>
+                Close
+              </Button>
+            </Grid>
+          </Grid>
+        </Box>
+      </DialogContent>
+    </Dialog>
   );
 };
 

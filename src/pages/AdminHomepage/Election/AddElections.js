@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import CandidateResult from "../../../components/VotersList/VotersList";
+import CandidateResult from "../../../components/AllUsers/VotersList";
 import CandidatesForm from "../../../components/Forms/CandidatesForm";
 
 const FormContainer = styled(Paper)({
