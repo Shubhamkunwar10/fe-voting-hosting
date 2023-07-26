@@ -5,10 +5,9 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import { useNavigate, useLocation, Outlet } from 'react-router-dom';
+import  AppBar  from '../../../components/Navbar/NavbarAdmin';
 
 
-import Navbar from '../../../components/Navbar/NavbarAdmin';
-import Sidenav from '../../../components/Sidenav/Sidenav';
 import DashboardLayout from './Dashboard';
 
 const drawerWidth = 240;
@@ -55,8 +54,56 @@ const Dashboard = () => {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <Navbar/>
-        <Sidenav  open={open} toggleDrawer={toggleDrawer} handleItemClick={handleItemClick} />
+        <AppBar/>
+        <Drawer variant="permanent" open={open}>
+          <Toolbar
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+              px: [1],
+            }}
+          >
+            <IconButton onClick={toggleDrawer}>
+              <ChevronLeftIcon />
+            </IconButton>
+          </Toolbar>
+          <Divider />
+          <List component="nav">
+            {/* Manually provide the navigation */}
+            <ListItemButton onClick={() => handleItemClick('admindashboard')}>
+              <ListItemIcon>
+                <SpaceDashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" />
+            </ListItemButton>
+            <ListItemButton onClick={() => handleItemClick('candidates')}>
+              <ListItemIcon>
+                <GroupAddIcon />
+              </ListItemIcon>
+              <ListItemText primary="Candidates " />
+            </ListItemButton>
+            <ListItemButton onClick={() => handleItemClick('voters')}>
+              <ListItemIcon>
+                <GroupsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Voters " />
+            </ListItemButton>
+            <ListItemButton onClick={() => handleItemClick('elections')}>
+              <ListItemIcon>
+                <AccountBalanceIcon />
+              </ListItemIcon>
+              <ListItemText primary="Election " />
+            </ListItemButton>
+            <ListItemButton onClick={() => handleItemClick('result')}>
+              <ListItemIcon>
+                <SpaceDashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary="Results" />
+            </ListItemButton>
+            <Divider sx={{ my: 1 }} />
+          </List>
+        </Drawer>
         <Box
           component="main"
           sx={{
