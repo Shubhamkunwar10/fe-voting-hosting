@@ -1,16 +1,66 @@
+// Dashboard.js
 import React, { useState } from 'react';
+import { useNavigate, useLocation, Outlet } from 'react-router-dom';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import MuiDrawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
+import MuiAppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText'; 
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Badge from '@mui/material/Badge';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { useNavigate, useLocation, Outlet } from 'react-router-dom';
-import  AppBar  from '../../../components/Navbar/NavbarAdmin';
+import Paper from '@mui/material/Paper';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
+import GroupsIcon from '@mui/icons-material/Groups';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
 
 import DashboardLayout from './Dashboard';
+import  AppBar  from '../../../components/Navbar/NavbarAdmin';
+
+
 
 const drawerWidth = 240;
+
+
+
+const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
+  ({ theme, open }) => ({
+    '& .MuiDrawer-paper': {
+      position: 'relative',
+      whiteSpace: 'nowrap',
+      width: drawerWidth,
+      transition: theme.transitions.create('width', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      boxSizing: 'border-box',
+      ...(!open && {
+        overflowX: 'hidden',
+        transition: theme.transitions.create('width', {
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
+        }),
+        width: theme.spacing(7),
+        [theme.breakpoints.up('sm')]: {
+          width: theme.spacing(9),
+        },
+      }),
+    },
+  }),
+);
+
+
 
 const defaultTheme = createTheme();
 
